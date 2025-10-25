@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600', '700'] })
 
 export const metadata: Metadata = {
-  title: 'PT Agro Pertiwi - Spices and Furniture',
+  title: 'PT Agro Putra Pertiwi - Spices and Furniture',
   description: 'Manufacture and trading company for Spices Commodities and Furniture Products from Indonesia.',
 }
 
@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
+        <div className="overflow-x-hidden"></div>
         <main>{children}</main>
         <Footer />
       </body>

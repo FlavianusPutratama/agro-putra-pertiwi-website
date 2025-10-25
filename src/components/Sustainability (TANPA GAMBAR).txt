@@ -1,0 +1,48 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from 'next/image';
+
+const Sustainability = () => {
+  return (
+    <section className="py-24 bg-brand-light overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Kolom Gambar */}
+          <motion.div 
+            className="overflow-hidden rounded-lg shadow-xl"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <Image 
+              src="https://res.cloudinary.com/djcrr0wsq/image/upload/v1760100437/Placeholder_PT_Agro_im5ujx.png" 
+              alt="Sustainable Farming" 
+              width={800} 
+              height={600} 
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          {/* Kolom Teks */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <h2 className="text-3xl font-bold text-brand-green mb-4">Our Commitment to Sustainability</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We believe in responsible sourcing that empowers local farmers and preserves Indonesia’s natural environment. By supporting ethical trade and sustainable farming, PT Agro Putra Pertiwi ensures that every shipment represents both quality and integrity.
+            </p>
+            <p className="text-gray-600 leading-relaxed font-semibold">
+              Our goal is to grow together—creating value for communities and customers worldwide.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Sustainability;

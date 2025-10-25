@@ -5,7 +5,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="text-2xl font-bold text-brand-green">
-          [cite_start]AGRO PERTIWI [cite: 1]
+          AGRO PUTRA PERTIWI
         </Link>
         <nav className="hidden md:flex space-x-6 text-gray-700">
           <Link href="#about" className="hover:text-brand-green transition-colors">About Us</Link>

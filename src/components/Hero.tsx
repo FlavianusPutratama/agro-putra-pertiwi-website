@@ -1,22 +1,51 @@
+"use client";
+import { motion } from "framer-motion";
+import { Phone, Download } from "lucide-react";
+
 const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative h-[80vh] flex items-center justify-center text-white bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/hero-bg.jpg')" }} // Ganti dengan gambar latar yang sesuai
+      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: "url('https://res.cloudinary.com/djcrr0wsq/image/upload/v1760099277/high-angle-asian-food-ingredients-with-copy-space_o9nlxl.jpg')" }}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
-      <div className="relative z-10 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          [cite_start]Premium Spices & Quality Furniture from Indonesia [cite: 5]
+      <div className="absolute inset-0 bg-black/60"></div>
+      <motion.div 
+        className="relative z-10 text-center px-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+          Premium Indonesian Spices – Export Ready
         </h1>
-        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-          [cite_start]Delivering the best of Indonesian natural resources to the worldwide market. [cite: 8, 17]
+        <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-200">
+          Delivering high-quality raw spices from Central Java—responsibly sourced, carefully sorted, and export-ready.
         </p>
-        <a href="#products" className="bg-brand-gold text-brand-brown font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors">
-          Explore Our Products
-        </a>
-      </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <motion.a 
+            href="https://wa.me/628112796793"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-brand-green text-white font-bold py-3 px-8 rounded-lg hover:bg-green-800 transition-all duration-300 text-lg transform hover:scale-105 w-full sm:w-auto"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Phone className="mr-2" size={20} />
+            Contact Us for Export
+          </motion.a>
+          <motion.a 
+            href="/path-to-your-catalog.pdf" // Ganti dengan path file katalog Anda nanti
+            download
+            className="flex items-center justify-center bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-lg hover:bg-brand-gold hover:text-brand-brown transition-all duration-300 text-lg transform hover:scale-105 w-full sm:w-auto"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Download className="mr-2" size={20} />
+            Download Product Catalog
+          </motion.a>
+        </div>
+      </motion.div>
     </section>
   );
 };
