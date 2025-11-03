@@ -32,7 +32,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Phone className="mr-2" size={20} />
-            Contact Us for Export
+            Contact Us for Any Inquiry
           </motion.a>
           <motion.a 
             href="/path-to-your-catalog.pdf" // Ganti dengan path file katalog Anda nanti
