@@ -1,12 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <Link href="/" className="text-2xl font-bold text-brand-green">
-          AGRO PUTRA PERTIWI
+        
+        {}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/Logo/Logo Agro Putra Pertiwi fix 2.png" 
+            alt="Agro Putra Pertiwi Logo"
+            width={90} // Lebar (px)
+            height={20} // Tinggi (px)
+            priority
+            className="h-auto"
+          />
         </Link>
+
         <nav className="hidden md:flex space-x-6 text-gray-700">
           <Link href="#about" className="hover:text-brand-green transition-colors">About Us</Link>
           <Link href="#why-us" className="hover:text-brand-green transition-colors">Why Choose Us</Link>
