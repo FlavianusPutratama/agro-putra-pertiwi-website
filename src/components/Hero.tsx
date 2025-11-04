@@ -35,7 +35,7 @@ const Hero = () => {
             Contact Us for Any Inquiry
           </motion.a>
           <motion.a 
-            href="/path-to-your-catalog.pdf" // Ganti dengan path file katalog Anda nanti
+            href="/path-to-your-catalog.pdf"
             download
             className="flex items-center justify-center bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-lg hover:bg-brand-gold hover:text-brand-brown transition-all duration-300 text-lg transform hover:scale-105 w-full sm:w-auto"
             whileHover={{ scale: 1.05 }}
